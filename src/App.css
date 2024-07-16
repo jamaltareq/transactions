@@ -1,38 +1,207 @@
-.App {
-  text-align: center;
+:root{
+  --text-color:rgba(34,42,66,.7);
+  --success-text:#0d6832;
+  --primary-text:#273e63;
+  --warning-text:#73510d;
+  --danger-text: #A61001;
+  --success-bg:#d6f0e0;
+  --primary-bg:#dfe7f6;
+  --warning-bg:#fbf0da;
+  --danger-bg: #FFEBE9;
+  --primary-btn-text:#3b71ca;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-nav{
+  background-image: url("./Assits/nav.png") ;
+  background-size:300px;
+  box-shadow: inset rgb(128, 104, 188) 150px 0px 60px -10px, inset rgb(128, 104, 188) -150px 0px 60px -10px; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.input-transparent{
+  font-size: 16px;
+  line-height: 1.5;
+  border: none;
+  background: rgb(255, 255, 255);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><path fill='%238C92A0' d='M13.22 14.63a8 8 0 1 1 1.41-1.41l4.29 4.29a1 1 0 1 1-1.41 1.41l-4.29-4.29zm-.66-2.07a6 6 0 1 0-8.49-8.49 6 6 0 0 0 8.49 8.49z'></path></svg>");  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  background-size: 20px 20px;
+  border-radius: 5px;
+  width: 300px;
+  border: #0d6efd 1px solid;
+  padding: .5em 1em .5em 2.5em;
+  margin-bottom: 0px;
+  } 
+  
+  
+  .input-transparent:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 100);
+    text-shadow: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><path fill='%238C92A0' d='M13.22 14.63a8 8 0 1 1 1.41-1.41l4.29 4.29a1 1 0 1 1-1.41 1.41l-4.29-4.29zm-.66-2.07a6 6 0 1 0-8.49-8.49 6 6 0 0 0 8.49 8.49z'></path></svg>");
+    background-repeat: no-repeat;
+  background-position: 10px 10px;
+  background-size: 20px 20px;
   }
+  
+.rotet{
+  transform: rotate(-50deg);
+}
+.header{
+  background-color: #f7f7f9;
+}
+.itemone{
+  background: rgb(180,94,251);
+}
+.itemtwo{
+  background: #fdb9f4;
+}
+.itemthree{
+  background: #fcd047;
+}
+.main{
+  background-color: #f5f6f8bb !important;
+  height: 100vh;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-primary{
+  color:var(--primary-btn-text) !important;
 }
 
-.App-link {
-  color: #61dafb;
+.fw-bold{
+  font-weight: 500 !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2{
+  font-weight: 400;
+  margin-bottom: unset;
+  
+}
+
+.action-icon{
+  font-size: 1.08rem;
+}
+
+/* //Badge color overwirte */
+
+
+
+.badge-success{
+  color:var(--success-text) !important;
+  background-color:var(--success-bg);
+  border: 1px solid;
+}
+
+.badge-primary{
+  color:var(--primary-text) !important;;
+  background-color:var(--primary-bg);
+  border: 1px solid;
+}
+
+.badge-warning{
+  color:var(--warning-text) !important;;
+  background-color:var(--warning-bg);
+  border: 1px solid;
+}
+
+.badge-danger{
+  color:var(--danger-text) !important;;
+  background-color: var(--danger-bg);
+  border: 1px solid;
+}
+
+.time{
+font-size:.75rem;
+}
+
+
+/* //Badge color overwirte end */
+
+
+/* table styling */
+
+/* primary table container  */
+.table-container{
+  box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 25%), 0px 2px 6px 2px rgb(60 64 67 / 10%);
+  padding:1rem;
+  border-radius: 12px;
+  background-color: white;
+}
+
+
+th{
+  padding:1rem .5rem !important;   
+ font-size: .875rem;
+  margin-bottom: 1rem !important;
+  background-color: white !important;
+  color:var(--text-color) !important;
+  font-weight: 600 !important;
+}
+
+th:last-child  {
+ border-top-right-radius: 12px;
+}
+
+th:first-child  {
+ border-top-left-radius: 12px;
+}
+
+/* //Removes border from last table row */
+
+tr td:last-child{
+  text-align: right;
+}
+
+
+/* Changing TH bottom border color*/
+.table>:not(:last-child)>:last-child>* {
+   border-bottom-color: rgba(128, 128, 128, 0.277) !important;
+  
+}
+
+ul{
+  margin-bottom: 0rem !important;
+}
+
+.avatar-span{
+width: 40px;
+height: 40px;
+cursor: pointer;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+border-radius: 20px;
+object-fit: fill;
+background-image: url("https://st4.depositphotos.com/14903220/22197/v/450/depositphotos_221970610-stock-illustration-abstract-sign-avatar-icon-profile.jpg");
+}
+
+/* table styling end*/
+
+/*  button styling */
+.btn-link{
+  font-weight: 500;
+  color:var(--primary-text);
+  /* border:1px solid #2c58a094 !important; */
+  border-radius: 8px;
+  text-decoration: underline 0.1em rgb(255, 255, 255) !important;
+  text-underline-offset: 0.2em !important;
+  transition: text-decoration-color 300ms, text-underline-offset 300ms !important;
+}
+
+.btn-link:hover{
+text-decoration-color:#0d6efd !important;
+text-underline-offset: 0.4em !important; 
+}
+
+.logout-btn{
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.page-link{
+  border: unset !important;
+  color:var(--primary-btn-text)
+}
+.h100{
+  height: 46vh;
 }
